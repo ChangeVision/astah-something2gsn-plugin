@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Astah-Edition: all
 Astah-Version: 1.1
-Bnd-LastModified: 1521684045575
+Bnd-LastModified: 1521706300457
 Build-Jdk: 1.8.0_144
 Built-By: takaitoshinori
 Bundle-Activator: astah.plugin.Activator
