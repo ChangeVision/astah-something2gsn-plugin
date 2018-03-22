@@ -4,19 +4,19 @@
       <actionSet
             label="%action_set_label"
             visible="true"
-            id="astah.plugin.obj2gsn.actionSet">
+            id="astah.plugin.something2gsn.actionSet">
          <menu
-               id="astah-something2gsn-plugin"
+               id="something2gsn"
                label="%menu_group"
-               path="tool/obj2gsn">
+               path="tool/something2gsn">
          </menu>
          <action
 			   label="%menu_label"
                icon="icons/sample.gif"
                class="astah.plugin.GenerateGSNFromDiagram"
                tooltip="%menu_tooltip"
-               menubarPath="tool/obj2gsn/"
-               id="obj2gsn">
+               menubarPath="tool/something2gsn/"
+               id="something2gsn">
          </action>
      </actionSet>
    </extension>
