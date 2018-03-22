@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <extension point="com.change_vision.astah.ui.actionSets">
+      <actionSet
+            label="%action_set_label"
+            visible="true"
+            id="astah.plugin.obj2gsn.actionSet">
+         <menu
+               id="astah-something2gsn-plugin"
+               label="%menu_group"
+               path="tool/obj2gsn">
+         </menu>
+         <action
+			   label="%menu_label"
+               icon="icons/sample.gif"
+               class="astah.plugin.GenerateGSNFromDiagram"
+               tooltip="%menu_tooltip"
+               menubarPath="tool/obj2gsn/"
+               id="obj2gsn">
+         </action>
+     </actionSet>
+   </extension>
+</plugin>
