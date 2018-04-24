@@ -45,7 +45,7 @@ enum class GSNDiagramType {
     TopicInMindMap {
         override val astahEdition = AstahEdition.All
         override val nodeTypeDefinition = NodeTypeDefinition(PlaceType.NAME_SUFFIX)
-        override fun getNodeName(node: INodePresentation) = node.toString()
+        override fun getNodeName(node: INodePresentation) = node.toString().substringBefore(':').trim()
         override fun isSubjectNode(node: INodePresentation): Boolean = node.type == "Topic"
         override fun isTarget(node: INodePresentation, link: ILinkPresentation): Boolean =
                 (link.target as INodePresentation) != node
