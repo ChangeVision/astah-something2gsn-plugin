@@ -15,6 +15,14 @@ class GsnSacm(val sacm: SACM<Int, String>) {
 
     fun addSolution(content: String) = addSolution(solutionConstructor(content))
 
+    fun addSubgoal(ugsn: GsnSacm) {
+        val c = sacm.getCompositeSACM() ?: throw Error()
+        val claim = sacm.getClaim() ?: throw Error()
+        claim.toBeSupported = false
+        sacm.addChild(SACM.CompositeSACM(SACMAssertedInferenceNode(ugsn.sacm.getNode().id,
+                ugsn.sacm.getNode(), c.internal), Arrays.asList(ugsn.sacm)))
+    }
+
     fun addStrategy(content: String, subgoals: List<SACM<Int, String>>): SACM<Int, String> {
         val claim = sacm.getClaim() ?: throw Error()
         val _ais = mutableListOf<SACMNode<Int, String>>()

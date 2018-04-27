@@ -29,8 +29,9 @@ class GSNGenerator(val diagramType: GSNDiagramType, diagram: IDiagram) {
                 GSNType.Goal -> {
                     val nexts = obtainNext(c)
                     val ugsn = GsnSacm.goalClaimConstructor(diagramType.getNodeName(c))
-                    nexts.mapNotNull(::generateArgument).forEach { (id, children) ->
+                    nexts.mapNotNull(::generateArgument).forEach { (id, cs) ->
                         val (nodeType, nodeName) = id
+                        val (children, nextNode) = cs
                         when (nodeType) {
                             GSNType.Strategy -> {
                                 val subgoalUGSNs = mutableListOf<GsnSacm>()
@@ -52,8 +53,7 @@ class GSNGenerator(val diagramType: GSNDiagramType, diagram: IDiagram) {
                                     }
                                 }
                             }
-                            GSNType.Goal -> {
-                            } // this plugin does not support a goal having sub-goals without strategies
+                            GSNType.Goal -> generateClaim(nextNode)?.let(ugsn::addSubgoal)
                             GSNType.Solution -> ugsn.addSolution(nodeName)
                             GSNType.Context -> ugsn.addContext(nodeName)
                             GSNType.Justification -> ugsn.addJustification(nodeName)
@@ -74,10 +74,11 @@ class GSNGenerator(val diagramType: GSNDiagramType, diagram: IDiagram) {
             }
         } ?: return null
     }
-    fun generateArgument(a : INodePresentation): Pair<Pair<GSNType, String>, List<GsnSacm>>? {
+    fun generateArgument(a : INodePresentation): Pair<Pair<GSNType, String>,
+            Pair<List<GsnSacm>, INodePresentation>>? {
         val aNodeType = GSNType.obtainType(diagramType.nodeTypeDefinition.getTypeName(a))
         return aNodeType?.let{
-            Pair(Pair(aNodeType, diagramType.getNodeName(a)), obtainNext(a).mapNotNull(::generateClaim))
+            Pair(Pair(aNodeType, diagramType.getNodeName(a)), Pair(obtainNext(a).mapNotNull(::generateClaim), a))
         }
     }
 }
