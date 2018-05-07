@@ -31,7 +31,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="Maven: com.change_vision.astah:astah-api:1.1">
+      <library name="Maven: com.change_vision.astah:astah-api:1.0">
         <CLASSES>
           <root url="jar:///Applications/astah dGSN/astah dgsn.app/Contents/Java/astah-api.jar!/" />
         </CLASSES>

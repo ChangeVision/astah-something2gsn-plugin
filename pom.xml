@@ -5,8 +5,8 @@
 		<bundle.symbolicName>astah.plugin.something2gsn</bundle.symbolicName>
 		<bundle.namespace>astah.plugin</bundle.namespace>
 		<plugin.install>true</plugin.install>
-		<astah.version>1.1</astah.version>
-		<astah.edition>all</astah.edition>
+		<astah.version>1.0</astah.version>
+		<astah.edition>uml,pro,gsn,sysml</astah.edition>
         <kotlin.version>1.2.30</kotlin.version>
     </properties>
 	<modelVersion>4.0.0</modelVersion>
