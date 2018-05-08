@@ -15,7 +15,7 @@ The plugin converts models on Class diagrams, Activity Diagrams, Block Definitio
 
 How to install
 ----------------
-[Download Astah Something2GSN plugin jar file.]()
+[Download Astah Something2GSN plugin jar file.](http://astah.change-vision.com/plugins/something2gsn/1.0.0.html)
 
 ### [If you are using Astah Professional]
 1. Launch Astah and drag the downloaded .jar file to an open instance of Astah. A pop-up will appear asking you to confirm installation, choose [Yes].

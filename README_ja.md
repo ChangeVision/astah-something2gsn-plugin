@@ -14,7 +14,7 @@ Description
 
 How to install
 ----------------
-[ここから、プラグイン.jarファイルをダウンロードします。]()
+[ここから、プラグイン.jarファイルをダウンロードします。](http://astah.change-vision.com/plugins/something2gsn/1.0.0.html)
 
 ### astah* UML、professional、SysMLをご利用の場合
 1. 上部メニュー[ヘルプ] – [プラグイン一覧] からプラグイン一覧を開きます。
