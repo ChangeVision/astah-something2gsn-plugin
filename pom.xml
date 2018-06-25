@@ -7,12 +7,12 @@
 		<plugin.install>true</plugin.install>
 		<astah.version>1.0</astah.version>
 		<astah.edition>uml,pro,gsn,sysml</astah.edition>
-        <kotlin.version>1.2.41</kotlin.version>
+        <kotlin.version>1.2.50</kotlin.version>
     </properties>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>astah.plugin</groupId>
 	<artifactId>something2gsn</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 	<name>%bundle.name</name>
 	<description>%bundle.description</description>
